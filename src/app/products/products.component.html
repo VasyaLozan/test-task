@@ -1,0 +1,21 @@
+<div class="products">
+  @for (product of productList; track product.id; let last = $last) {
+    @if (last) {
+      <mat-card class="product" (appIntersectionListener)="loadLazyProducts()">
+        <mat-card-header>
+          <mat-card-title>{{product?.name}}</mat-card-title>
+          <mat-card-subtitle>{{product?.model}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>{{product?.description}}</mat-card-content>
+      </mat-card>
+    } @else {
+      <mat-card class="product">
+        <mat-card-header>
+          <mat-card-title>{{product?.name}}</mat-card-title>
+          <mat-card-subtitle>{{product?.model}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>{{product?.description}}</mat-card-content>
+      </mat-card>
+    }
+  }
+</div>

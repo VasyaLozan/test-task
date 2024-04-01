@@ -1,0 +1,19 @@
+.main-container {
+  margin: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mat-mdc-button-base:last-child {
+  margin-left: 10px;
+}
+
+.active {
+  background-color: #3f51b1;
+  color: white !important;
+}
