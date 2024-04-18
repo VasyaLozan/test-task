@@ -1,0 +1,18 @@
+<div>
+  <div class="word">
+    попільничка
+  </div>
+  @if (exist) {
+    <div class="error">Word already exist!</div>
+  }
+  <form (ngSubmit)="addWord(word)" class="container">
+    <mat-form-field class="example-full-width">
+      <mat-label>New word</mat-label>
+      <input type="text" matInput [(ngModel)]="word" [ngModelOptions]="{standalone: true}" placeholder="Word">
+    </mat-form-field>
+    <button type="submit" mat-flat-button color="primary">Enter</button>
+  </form>
+  <div class="words">
+    {{words| json}}
+  </div>
+</div>

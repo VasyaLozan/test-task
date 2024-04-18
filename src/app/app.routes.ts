@@ -20,8 +20,13 @@ export const routes: Routes = [
     canActivate: [authGuard]
   },
   {
+    path: 'words-game',
+    title: 'Words Game',
+    loadComponent: () => import('./words-game/words-game.component').then(m => m.WordsGameComponent)
+  },
+  {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/words-game',
     pathMatch: "full"
   },
   {
